@@ -1,0 +1,298 @@
+/* Gallery.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white !important;
+}
+body .dark, html .dark{
+    background-color: #333 !important;
+    color: #f0f0f0 !important;
+}
+.App {
+    color: #333;
+    padding: 20px;
+    animation: fadeIn 0.6s forwards; /* Fade in over 0.6 seconds */
+}
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gallery-title {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 40px !important;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Light mode search bar styling */
+.search-bar {
+    padding: 8px;
+    font-size: 1em;
+    width: 400px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.search-bar:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for focus effect */
+}
+
+/* Dark mode search bar styling */
+.dark-search-bar {
+    background-color: #555;
+    color: #f0f0f0;
+    border: 1px solid #444;
+    transition: box-shadow 0.3s ease;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.gallery-title {
+    font-size: 2em;
+    text-align: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.no-results {
+    text-align: center;
+    font-size: 1.5em;
+    color: #888;
+}
+
+.dark-no-results {
+    color: #ccc;
+}
+.dark-search-bar:focus {
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.6); /* White shadow for focus effect */
+}
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #444;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background-color: white !important;
+    color: #333 !important;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gallery-row {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.image-slider {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-wrapper {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+}
+
+.image-card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+.image-card.dark-card {
+    background-color: #444;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+.gallery-image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.image-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.hover-info {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
+
+.image-card:hover .hover-info {
+    display: block;
+}
+
+.slide-btn {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #888;
+}
+
+@media (max-width: 800px) {
+    .image-wrapper {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Screen 800px and below */
+@media (max-width: 800px) {
+    .gallery-title {
+        font-size: 1.8em;
+        /* Slightly reduce font size for titles */
+    }
+
+    .search-bar {
+        width: 300px;
+        /* Reduce search bar width */
+    }
+
+    .image-card {
+        width: 180px;
+        /* Smaller image card */
+        margin: 8px;
+        /* Reduced margin */
+    }
+
+    /* Adjust to show only two items in a row if applicable */
+    .gallery-row {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        /* Enable horizontal scrolling */
+    }
+}
+
+/* Screen 600px and below */
+@media (max-width: 600px) {
+    .gallery-title {
+        font-size: 1.5em;
+        /* Smaller font size for titles */
+    }
+
+    .search-bar {
+        width: 200px;
+        /* Further reduce search bar width */
+    }
+
+    .image-card {
+        width: 150px;
+        /* Smaller image card */
+        margin: 6px;
+        /* Reduced margin */
+    }
+
+    /* Stack images vertically on smaller screens */
+    .gallery-row {
+        flex-direction: column;
+    }
+
+    .gallery-image {
+        width: 100%;
+        /* Ensure images remain responsive */
+        height: auto;
+    }
+}
+
+/* Screen 400px and below */
+@media (max-width: 400px) {
+    .gallery-title {
+        font-size: 1.2em;
+        /* Even smaller font size for titles */
+        text-align: center;
+        /* Center-align title */
+    }
+
+    .search-bar {
+        width: 150px;
+        /* Further reduce search bar width */
+    }
+
+    .image-card {
+        width: 100%;
+        /* Make image cards full-width on very small screens */
+        margin: 5px 0;
+        /* Reduced top/bottom margin */
+    }
+
+    /* Single-column layout for extremely small screens */
+    .gallery-row {
+        display: block;
+        /* Ensure single column */
+    }
+}
+
+/* Optional additional styling for very narrow screens */
+@media (max-width: 320px) {
+    .gallery-title {
+        font-size: 1em;
+        /* Smallest font size for titles */
+    }
+
+    .search-bar {
+        width: 100%;
+        /* Full width search bar for narrow screens */
+    }
+}
