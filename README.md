@@ -22,6 +22,8 @@ A dynamic and responsive image gallery built with **React.js**, featuring an int
 
 👨‍💻 Author
    Developed by Kathir Moorthy Suresh Babu. Feel free to connect on LinkedIn for collaboration!
+   https://image-gallery-react-ebon.vercel.app/
+   
 ---
 
 ## 🏗️ Project Structure
@@ -46,7 +48,7 @@ A dynamic and responsive image gallery built with **React.js**, featuring an int
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/image-gallery.git
+   git clone https://github.com/Kathir-Moorthy/image-gallery.git
 
 2. Navigate into the project directory:
    ```bash
