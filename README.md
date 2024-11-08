@@ -22,6 +22,7 @@ A dynamic and responsive image gallery built with **React.js**, featuring an int
 
 👨‍💻 Author
    Developed by Kathir Moorthy Suresh Babu. Feel free to connect on LinkedIn for collaboration!
+   
    https://image-gallery-react-ebon.vercel.app/
    
 ---
